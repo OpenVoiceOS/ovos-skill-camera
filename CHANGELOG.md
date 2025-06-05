@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5a3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.5a3) (2025-06-05)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.5a2...1.0.5a3)
+
+**Merged pull requests:**
+
+- gl/translate [\#24](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/24) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
 ## [1.0.5a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.5a2) (2025-03-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.5a1...1.0.5a2)
