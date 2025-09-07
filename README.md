@@ -1,6 +1,6 @@
 # Camera Skill
 
-Camera skill for OpenVoiceOS, needs the companion [ovos-PHAL-plugin-camera](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-camera)
+Camera skill for OpenVoiceOS, needs the companion plugin [ovos-PHAL-plugin-camera](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-camera) or [ovos-PHAL-plugin-termux](https://github.com/HiveMindInsiders/ovos-PHAL-plugin-termux)
 
 ## Description
 
