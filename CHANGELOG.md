@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.5a8](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.5a8) (2025-12-20)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.5a7...1.0.5a8)
+
+**Merged pull requests:**
+
+- Configure Renovate [\#33](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/33) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [1.0.5a7](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.5a7) (2025-11-21)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.5a6...1.0.5a7)
