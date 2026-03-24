@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.6a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.6a1) (2026-03-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.5a8...1.0.6a1)
+
+**Merged pull requests:**
+
+- fix: rename bare lang code locale directories [\#41](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/41) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.0.5a8](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.5a8) (2025-12-20)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.5a7...1.0.5a8)
