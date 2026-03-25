@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.0.7a3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.7a3) (2026-03-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.7a2...1.0.7a3)
+
+**Merged pull requests:**
+
+- translate\(it-IT\): update picture.dialog [\#47](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/47) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(it-IT\): update get\_ready.dialog [\#46](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/46) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+
 ## [1.0.7a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.7a2) (2026-03-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.7a1...1.0.7a2)
@@ -7,6 +16,7 @@
 **Merged pull requests:**
 
 - translate\(it-IT\): update take\_picture.intent [\#48](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/48) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
+- translate\(it-IT\): update camera\_yes.dialog [\#45](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/45) ([ovos-localize[bot]](https://github.com/apps/ovos-localize))
 
 ## [1.0.7a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.7a1) (2026-03-24)
 
