@@ -1,5 +1,9 @@
 # Changelog
 
+## [1.0.7a4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.7a4) (2026-03-25)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.7a3...1.0.7a4)
+
 ## [1.0.7a3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.7a3) (2026-03-25)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.7a2...1.0.7a3)
