@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.9a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.9a1) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.8a2...1.0.9a1)
+
+**Merged pull requests:**
+
+- fix\(i18n\): normalize locale folders to canonical BCP-47 [\#56](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/56) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.0.8a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.8a2) (2026-04-04)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.8a1...1.0.8a2)
