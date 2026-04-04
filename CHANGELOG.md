@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.8a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.8a2) (2026-04-04)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.8a1...1.0.8a2)
+
+**Merged pull requests:**
+
+- ci: modernize GitHub workflows [\#54](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/54) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.0.8a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.8a1) (2026-04-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.7a4...1.0.8a1)
