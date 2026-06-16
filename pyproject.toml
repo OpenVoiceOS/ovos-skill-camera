@@ -13,7 +13,8 @@ authors = [
 ]
 keywords = ["ovos", "skill", "plugin"]
 dependencies = [
-    "ovos_workshop>=0.0.12"
+    "ovos-plugin-manager>=2.1.0,<3.0.0",
+    "ovos_workshop>=0.0.12,<9.0.0"
 ]
 
 [project.optional-dependencies]
