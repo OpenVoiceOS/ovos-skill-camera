@@ -89,3 +89,12 @@ class TestPadatious2_Take_picture_intent(_IntentRoutingMixin, TestCase):
 
     def test_take_a_picture(self):
         self._assert_padacioso(r"take a picture", r"take_picture.intent")
+
+    def test_take_a_selfie(self):
+        self._assert_padacioso(r"take a selfie", r"take_picture.intent")
+
+    def test_snap_a_photo_of_me(self):
+        self._assert_padacioso(r"snap a photo of me", r"take_picture.intent")
+
+    def test_use_the_camera_to_take_a_selfie(self):
+        self._assert_padacioso(r"use the camera to take a selfie", r"take_picture.intent")
