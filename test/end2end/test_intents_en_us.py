@@ -26,11 +26,11 @@ class _IntentRoutingMixin:
             cls.minicroft.stop()
 
 
-    def _assert_padacioso(self, utterance: str, intent_file: str):
+    def _assert_padatious(self, utterance: str, intent_file: str):
         intent_msg_type = f"{SKILL_ID}:{intent_file}"
         session = Session(f"e2e-en_us-{intent_file}-{hash(utterance)}")
         session.lang = LANG
-        session.pipeline = ["ovos-padacioso-pipeline-plugin-medium"]
+        session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
         message = Message(
             "recognizer_loop:utterance",
             {"utterances": [utterance], "lang": LANG},
@@ -46,7 +46,7 @@ class _IntentRoutingMixin:
             test_msg_context=False,
             test_message_number=False,
             ignore_messages=[
-                "speak",
+                "ovos.utterance.speak",
                 "mycroft.audio.play_sound",
                 # camera PHAL handshake fired from inside the intent handler;
                 # not relevant to intent-routing assertions
@@ -68,33 +68,33 @@ class _IntentRoutingMixin:
 class TestPadatious1_Have_camera_intent(_IntentRoutingMixin, TestCase):
     """Padatious intent: have_camera.intent"""
     def test_can_i_use_the_camera(self):
-        self._assert_padacioso(r"can I use the camera", r"have_camera.intent")
+        self._assert_padatious(r"can I use the camera", r"have_camera.intent")
 
     def test_can_you_access_the_camera(self):
-        self._assert_padacioso(r"can you access the camera", r"have_camera.intent")
+        self._assert_padatious(r"can you access the camera", r"have_camera.intent")
 
     def test_do_you_have_a_camera(self):
-        self._assert_padacioso(r"do you have a camera", r"have_camera.intent")
+        self._assert_padatious(r"do you have a camera", r"have_camera.intent")
 
     def test_is_a_camera_available(self):
-        self._assert_padacioso(r"is a camera available", r"have_camera.intent")
+        self._assert_padatious(r"is a camera available", r"have_camera.intent")
 
     def test_is_the_camera_working(self):
-        self._assert_padacioso(r"is the camera working", r"have_camera.intent")
+        self._assert_padatious(r"is the camera working", r"have_camera.intent")
 
 class TestPadatious2_Take_picture_intent(_IntentRoutingMixin, TestCase):
     """Padatious intent: take_picture.intent"""
     def test_take_a_photo(self):
-        self._assert_padacioso(r"take a photo", r"take_picture.intent")
+        self._assert_padatious(r"take a photo", r"take_picture.intent")
 
     def test_take_a_picture(self):
-        self._assert_padacioso(r"take a picture", r"take_picture.intent")
+        self._assert_padatious(r"take a picture", r"take_picture.intent")
 
     def test_take_a_selfie(self):
-        self._assert_padacioso(r"take a selfie", r"take_picture.intent")
+        self._assert_padatious(r"take a selfie", r"take_picture.intent")
 
     def test_snap_a_photo_of_me(self):
-        self._assert_padacioso(r"snap a photo of me", r"take_picture.intent")
+        self._assert_padatious(r"snap a photo of me", r"take_picture.intent")
 
     def test_use_the_camera_to_take_a_selfie(self):
-        self._assert_padacioso(r"use the camera to take a selfie", r"take_picture.intent")
+        self._assert_padatious(r"use the camera to take a selfie", r"take_picture.intent")
