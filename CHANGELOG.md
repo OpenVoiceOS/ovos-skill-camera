@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.10a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.10a1) (2026-07-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.9a2...1.0.10a1)
+
+**Merged pull requests:**
+
+- fix: allow ovos-workshop 9.x [\#64](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/64) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.0.9a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.9a2) (2026-06-16)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.9a1...1.0.9a2)
