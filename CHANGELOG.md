@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.1.0a1) (2026-07-16)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.10a1...1.1.0a1)
+
+**Merged pull requests:**
+
+- feat\(en-US\): broaden camera intent coverage via inline grammar [\#62](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/62) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.0.10a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.10a1) (2026-07-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.9a2...1.0.10a1)
