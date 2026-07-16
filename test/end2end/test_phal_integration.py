@@ -80,7 +80,7 @@ class TestCameraPhalIntegration(TestCase):
     def _drive(self, utterance):
         session = Session(f"e2e-phal-{hash(utterance)}")
         session.lang = LANG
-        session.pipeline = ["ovos-padacioso-pipeline-plugin-medium"]
+        session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
         handled = []
         self.minicroft.bus.on("ovos.utterance.handled", lambda m: handled.append(m))
         message = Message(

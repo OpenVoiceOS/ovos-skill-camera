@@ -1,6 +1,3 @@
-can I use the camera
-can you access the camera
-do you have a camera
-is a camera available
-is the camera working
-is there a camera
+(can you|can I|are you able to) (use|access|open|reach) (a|the) camera
+do you have (a|the) camera
+is (a|the|there a) camera [available|working|ready|connected|on]
