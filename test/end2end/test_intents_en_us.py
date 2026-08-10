@@ -46,7 +46,9 @@ class _IntentRoutingMixin:
             test_msg_context=False,
             test_message_number=False,
             ignore_messages=[
-                "ovos.utterance.speak",
+                "speak",
+                "recognizer_loop:audio_output_start",
+                "recognizer_loop:audio_output_end",
                 "mycroft.audio.play_sound",
                 # camera PHAL handshake fired from inside the intent handler;
                 # not relevant to intent-routing assertions
