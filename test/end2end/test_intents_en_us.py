@@ -7,6 +7,7 @@ from unittest import TestCase
 
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
+from ovos_spec_tools import SpecMessage
 from ovoscope import End2EndTest, get_minicroft
 
 SKILL_ID = "ovos-skill-camera.openvoiceos"
@@ -27,7 +28,14 @@ class _IntentRoutingMixin:
 
 
     def _assert_padatious(self, utterance: str, intent_file: str):
-        intent_msg_type = f"{SKILL_ID}:{intent_file}"
+        # OVOS-PIPELINE-1 §9.2/§8: the orchestrator broadcasts the generic
+        # SpecMessage.INTENT_MATCHED (data.intent_name carries the matched
+        # intent), then wraps the per-skill dispatch in the handler-lifecycle
+        # trio. The legacy "<skill_id>:<intent>.intent" topic is no longer
+        # emitted as the match notification; the dispatch topic itself also
+        # drops the ".intent" suffix.
+        intent_name = intent_file.removesuffix(".intent")
+        intent_msg_type = f"{SKILL_ID}:{intent_name}"
         session = Session(f"e2e-en_us-{intent_file}-{hash(utterance)}")
         session.lang = LANG
         session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
@@ -42,11 +50,13 @@ class _IntentRoutingMixin:
             eof_msgs=["ovos.utterance.handled"],
             flip_points=["recognizer_loop:utterance"],
             source_message=message,
-            activation_points=[intent_msg_type],
+            activation_points=[str(SpecMessage.INTENT_MATCHED)],
             test_msg_context=False,
             test_message_number=False,
             ignore_messages=[
-                "ovos.utterance.speak",
+                str(SpecMessage.SPEAK),
+                "recognizer_loop:audio_output_start",
+                "recognizer_loop:audio_output_end",
                 "mycroft.audio.play_sound",
                 # camera PHAL handshake fired from inside the intent handler;
                 # not relevant to intent-routing assertions
@@ -56,9 +66,12 @@ class _IntentRoutingMixin:
             expected_messages=[
                 message,
                 Message(f"{SKILL_ID}.activate", {}, {"skill_id": SKILL_ID}),
+                Message(str(SpecMessage.INTENT_MATCHED), {}, {"skill_id": SKILL_ID}),
+                Message(str(SpecMessage.INTENT_HANDLER_START), {}, {"skill_id": SKILL_ID}),
                 Message(intent_msg_type, {}, {"skill_id": SKILL_ID}),
                 Message("mycroft.skill.handler.start", {}, {"skill_id": SKILL_ID}),
                 Message("mycroft.skill.handler.complete", {}, {"skill_id": SKILL_ID}),
+                Message(str(SpecMessage.INTENT_HANDLER_COMPLETE), {}, {"skill_id": SKILL_ID}),
                 Message("ovos.utterance.handled", {}, {"skill_id": SKILL_ID}),
             ],
         )
