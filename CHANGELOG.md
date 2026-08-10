@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.1.0a3) (2026-08-10)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.1.0a2...1.1.0a3)
+
+**Merged pull requests:**
+
+- Update dependency ovoscope to v1 [\#63](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/63) ([renovate[bot]](https://github.com/apps/renovate))
+
 ## [1.1.0a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.1.0a2) (2026-08-01)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.1.0a1...1.1.0a2)
