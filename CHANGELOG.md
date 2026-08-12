@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0a4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.1.0a4) (2026-08-12)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.1.0a3...1.1.0a4)
+
+**Merged pull requests:**
+
+- test: add golden-utterance e2e suite \(en-US\) [\#70](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/70) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.1.0a3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.1.0a3) (2026-08-10)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.1.0a2...1.1.0a3)
