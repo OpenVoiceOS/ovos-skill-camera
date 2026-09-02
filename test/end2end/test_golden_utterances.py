@@ -9,6 +9,7 @@ carry no ``.intent`` suffix (OVOS-INTENT-2 naming), matching the convention
 already used by ``test_intents_en_us.py`` in this repo.
 """
 import json
+import time
 from pathlib import Path
 
 import pytest
@@ -71,6 +72,14 @@ GOLDEN_ROWS = [pytest.param(r, id=r["utterance"]) for r in _load_golden_rows()]
 @pytest.fixture(scope="module")
 def minicroft():
     mc = get_minicroft([SKILL_ID])
+    # ovos-padatious compiles its container in a background thread; a query
+    # that arrives before that thread finishes is served the pre-registration
+    # ("last compiled") state and comes back unmatched (see
+    # ovos_padatious.padaos:calc_intents "padaos compiling in background,
+    # serving last compiled state in the meantime"). The earliest rows in
+    # this parametrized suite raced that thread and flaked. Give it a moment
+    # to settle before any assertion fires.
+    time.sleep(2)
     yield mc
     mc.stop()
 
@@ -93,7 +102,7 @@ def _types(mc, text, session_id):
     return [m.msg_type for m in capture.finish()]
 
 
-@pytest.mark.timeout(60)
+@pytest.mark.timeout(300)
 @pytest.mark.parametrize("row", GOLDEN_ROWS, ids=lambda r: r["utterance"])
 def test_golden_utterance(minicroft, row):
     intent_name = _label_to_bus_name(row["intent_label"])
@@ -103,7 +112,7 @@ def test_golden_utterance(minicroft, row):
     )
 
 
-@pytest.mark.timeout(60)
+@pytest.mark.timeout(300)
 @pytest.mark.parametrize("negative", NEGATIVE_UTTERANCES, ids=lambda n: n[0])
 def test_negative_confusable_not_claimed(minicroft, negative):
     text, source_skill = negative

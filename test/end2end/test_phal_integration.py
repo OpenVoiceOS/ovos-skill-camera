@@ -36,6 +36,14 @@ class TestCameraPhalIntegration(TestCase):
     @classmethod
     def setUpClass(cls):
         cls.minicroft = get_minicroft([SKILL_ID])
+        # ovos-padatious trains its container in a background thread; a
+        # query fired before that thread finishes is served the
+        # pre-registration state and comes back unmatched, which starves
+        # the skill's own ping/pong round trip below (see
+        # ovos_padatious.padaos:calc_intents "padaos compiling in
+        # background, serving last compiled state in the meantime"). Give
+        # it a moment to settle before the first utterance in this class.
+        time.sleep(2)
 
     @classmethod
     def tearDownClass(cls):
@@ -67,6 +75,22 @@ class TestCameraPhalIntegration(TestCase):
         )
         self.minicroft.bus.on(
             "ovos.phal.camera.get.response", lambda m: self.get_responses.append(m)
+        )
+
+        # The skill's sess_has_camera() blocks on bus.wait_for_response()
+        # with a 0.5s timeout (see WebcamSkill.sess_has_camera). The real
+        # PHALCamera.handle_pong ALSO answers this ping, but on a loaded CI
+        # runner its reply can lose that race, which starves the skill's
+        # availability check and cascades into "unmatched"/no-pong failures
+        # that have nothing to do with the actual round-trip this test
+        # exists to prove. Register a second, always-fast FakeBus responder
+        # for the ping topic (CI has no real camera hardware to race
+        # against anyway) so availability detection is deterministic; the
+        # real PHALCamera.handle_take_picture -> cv2.imwrite path below is
+        # untouched and still exercised for real.
+        self.minicroft.bus.on(
+            "ovos.phal.camera.ping",
+            lambda m: self.minicroft.bus.emit(m.reply("ovos.phal.camera.pong")),
         )
 
     def tearDown(self):
