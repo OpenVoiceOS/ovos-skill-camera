@@ -1,0 +1,57 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ovos-skill-camera"
+dynamic = ["version"]
+description = "OVOS camera skill"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+authors = [
+    {name = "JarbasAi", email = "jarbasai@mailfence.com"}
+]
+keywords = ["ovos", "skill", "plugin"]
+dependencies = [
+    "ovos-plugin-manager>=2.1.0,<3.0.0",
+    "ovos_workshop>=0.0.12,<10.0.0"
+]
+
+[project.optional-dependencies]
+test = [
+    "ovoscope>=1.5.0,<1.6.0",
+    "pytest>=7.0.0,<9",
+    "pytest-timeout>=2.0.0",
+    "padacioso>=1.0.2a3",
+    "ovos-PHAL-plugin-camera>=0.2.2a6",
+    "ovos-adapt-parser",
+    "ovos-padatious",
+    "ovos-m2v-pipeline",
+    "nebulento",
+    "palavreado"
+]
+
+[project.urls]
+Homepage = "https://github.com/OpenVoiceOS/ovos-skill-camera"
+
+[project.entry-points."opm.skill"]
+"ovos-skill-camera.openvoiceos" = "ovos_skill_camera:WebcamSkill"
+
+[tool.setuptools]
+packages = ["ovos_skill_camera"]
+
+[tool.setuptools.package-dir]
+ovos_skill_camera = ""
+
+[tool.setuptools.dynamic]
+version = {attr = "ovos_skill_camera.version.__version__"}
+
+[tool.setuptools.package-data]
+ovos_skill_camera = [
+    "*.json",
+    "*.wav",
+    "locale/**/*",
+    "locale/*/*.voc",
+    "locale/*/*.intent",
+    "locale/*/*.dialog",
+]
