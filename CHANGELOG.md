@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.0a5](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.1.0a5) (2026-09-03)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.1.0a4...1.1.0a5)
+
+**Merged pull requests:**
+
+- Numeric picture countdown, webcam phrasing, picture-location intent [\#73](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/73) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.1.0a4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.1.0a4) (2026-08-12)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.1.0a3...1.1.0a4)
