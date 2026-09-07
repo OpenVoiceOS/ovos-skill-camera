@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.2.0a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.2.0a2) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.2.0a1...1.2.0a2)
+
+**Merged pull requests:**
+
+- chore: drop unused ovos-adapt-parser dependency [\#80](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/80) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.2.0a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.2.0a1) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.1.1a1...1.2.0a1)
