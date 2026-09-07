@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.1.1a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.1.1a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.1.0a5...1.1.1a1)
+
+**Merged pull requests:**
+
+- fix: ship every en-US intent in all locales [\#75](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/75) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.1.0a5](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.1.0a5) (2026-09-03)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.1.0a4...1.1.0a5)
