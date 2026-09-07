@@ -24,7 +24,6 @@ test = [
     "pytest-timeout>=2.0.0",
     "padacioso>=1.0.2a3",
     "ovos-PHAL-plugin-camera>=0.2.2a6",
-    "ovos-adapt-parser",
     "ovos-padatious",
     "ovos-m2v-pipeline",
     "nebulento",
