@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.0a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.3.0a1) (2026-09-07)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.2.0a2...1.3.0a1)
+
+**Merged pull requests:**
+
+- feat: oc-FR locale parity [\#78](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/78) ([JarbasAl](https://github.com/JarbasAl))
+
 ## [1.2.0a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.2.0a2) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.2.0a1...1.2.0a2)
