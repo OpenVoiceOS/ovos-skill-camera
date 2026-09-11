@@ -1,0 +1,14 @@
+{
+  "have_camera.intent": [
+    "Podo usar a cámara?",
+    "Podes acceder á cámara?",
+    "Tes unha cámara?",
+    "Hai unha cámara dispoñible?",
+    "Funciona a cámara?",
+    "Hai unha cámara?"
+  ],
+  "take_picture.intent": [
+    "(sacar|tirar|saca|tira) unha foto",
+    "(sacar|tirar|saca|tira) unha (foto|fotografía)"
+  ]
+}
