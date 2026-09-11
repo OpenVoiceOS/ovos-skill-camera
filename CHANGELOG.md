@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.3.1a1) (2026-09-11)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.3.0a2...1.3.1a1)
+
+**Merged pull requests:**
+
+- fix: close locale parity gap in ovos-skill-camera [\#85](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/85) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+- translate\(da-DK\): add missing picture.location.dialog, add countdown support, enrich have\_camera.intent [\#84](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/84) ([andlo](https://github.com/andlo))
+
 ## [1.3.0a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.3.0a2) (2026-09-07)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.3.0a1...1.3.0a2)
