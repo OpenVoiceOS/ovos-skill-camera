@@ -70,7 +70,7 @@ class WebcamSkill(OVOSSkill):
 
     @intent_handler("picture_location.intent")
     def handle_picture_location(self, message):
-        self.speak_dialog("picture.location", {"path": self.pictures_folder})
+        self.speak_dialog("picture_location", {"path": self.pictures_folder})
 
     def do_countdown(self, seconds: int):
         # need time to allow sensor to stabilize
