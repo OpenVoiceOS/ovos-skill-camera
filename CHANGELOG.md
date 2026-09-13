@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.2a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.3.2a1) (2026-09-13)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.3.1a1...1.3.2a1)
+
+**Merged pull requests:**
+
+- fix: lowercase-underscore dialog base name \(OVOS-INTENT-2 §2\) [\#87](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/87) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.3.1a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.3.1a1) (2026-09-11)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.3.0a2...1.3.1a1)
