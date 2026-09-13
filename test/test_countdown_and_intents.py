@@ -2,7 +2,7 @@
 
 * numeric countdown slot on ``take_picture.intent``
 * webcam synonym phrasings on ``have_camera.intent``
-* the new ``picture_location.intent`` / ``picture.location.dialog``
+* the new ``picture_location.intent`` / ``picture_location.dialog``
 
 Camera/PHAL are fully mocked; the skill is instantiated without the real
 ``OVOSSkill.__init__`` (no bus connection, no filesystem settings) so these
@@ -89,7 +89,7 @@ class TestPictureLocation(TestCase):
         skill.handle_picture_location(msg)
 
         skill.speak_dialog.assert_called_once_with(
-            "picture.location", {"path": "/home/user/Pics"}
+            "picture_location", {"path": "/home/user/Pics"}
         )
 
     def test_defaults_to_pictures_home(self):
@@ -98,7 +98,7 @@ class TestPictureLocation(TestCase):
         skill.handle_picture_location(msg)
 
         skill.speak_dialog.assert_called_once_with(
-            "picture.location", {"path": "~/Pictures"}
+            "picture_location", {"path": "~/Pictures"}
         )
 
 
