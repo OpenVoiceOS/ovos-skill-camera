@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.3.2a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.3.2a2) (2026-09-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.3.2a1...1.3.2a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every locale [\#89](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/89) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.3.2a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.3.2a1) (2026-09-13)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.3.1a1...1.3.2a1)
@@ -240,6 +248,150 @@
 ## [V1.0.4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/V1.0.4) (2025-01-24)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.4...V1.0.4)
+
+## [1.0.4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.4) (2025-01-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.3...1.0.4)
+
+## [1.0.3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.3) (2025-01-24)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.3a4...1.0.3)
+
+## [1.0.3a4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.3a4) (2025-01-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.3a3...1.0.3a4)
+
+## [1.0.3a3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.3a3) (2025-01-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.3a1...1.0.3a3)
+
+**Merged pull requests:**
+
+- fr/fr missing translation [\#18](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/18) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- fr/fr missing translation [\#17](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/17) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [1.0.3a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.3a1) (2025-01-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.3a2...1.0.3a1)
+
+## [1.0.3a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.3a2) (2025-01-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.2...1.0.3a2)
+
+**Merged pull requests:**
+
+- Release 1.0.3a2 [\#16](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/16) ([github-actions[bot]](https://github.com/apps/github-actions))
+- Add Catalan strings [\#15](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/15) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+- Add Catalan strings [\#14](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/14) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [1.0.2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.2) (2025-01-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/V1.0.2...1.0.2)
+
+## [V1.0.2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/V1.0.2) (2025-01-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.2a1...V1.0.2)
+
+**Merged pull requests:**
+
+- Release 1.0.2a1 [\#13](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/13) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [1.0.2a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.2a1) (2025-01-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.1...1.0.2a1)
+
+**Merged pull requests:**
+
+- Danis added [\#12](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/12) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [1.0.1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.1) (2025-01-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/V1.0.1...1.0.1)
+
+## [V1.0.1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/V1.0.1) (2025-01-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.1a1...V1.0.1)
+
+**Merged pull requests:**
+
+- Release 1.0.1a1 [\#11](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/11) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [1.0.1a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.1a1) (2025-01-18)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.0...1.0.1a1)
+
+**Merged pull requests:**
+
+- pt-pt/translate [\#10](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/10) ([gitlocalize-app[bot]](https://github.com/apps/gitlocalize-app))
+
+## [1.0.0](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.0) (2025-01-06)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/V1.0.0...1.0.0)
+
+## [V1.0.0](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/V1.0.0) (2025-01-06)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.0.0a1...V1.0.0)
+
+**Merged pull requests:**
+
+- Release 1.0.0a1 [\#9](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/9) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [1.0.0a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.0.0a1) (2025-01-06)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/0.0.4...1.0.0a1)
+
+**Breaking changes:**
+
+- refactor!:adopt PHAL plugin [\#8](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/8) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.0.4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/0.0.4) (2024-12-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/V0.0.4...0.0.4)
+
+## [V0.0.4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/V0.0.4) (2024-12-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/0.0.4a1...V0.0.4)
+
+**Merged pull requests:**
+
+- Release 0.0.4a1 [\#7](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/7) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [0.0.4a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/0.0.4a1) (2024-12-26)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/V0.0.3...0.0.4a1)
+
+**Merged pull requests:**
+
+- Update requirements.txt [\#6](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/6) ([JarbasAl](https://github.com/JarbasAl))
+
+## [V0.0.3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/V0.0.3) (2024-11-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/0.0.3...V0.0.3)
+
+## [0.0.3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/0.0.3) (2024-11-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/0.0.3a1...0.0.3)
+
+**Merged pull requests:**
+
+- Release 0.0.3a1 [\#4](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/4) ([github-actions[bot]](https://github.com/apps/github-actions))
+
+## [0.0.3a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/0.0.3a1) (2024-11-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/0.0.2a1...0.0.3a1)
+
+**Merged pull requests:**
+
+- fix: BGR [\#3](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/3) ([JarbasAl](https://github.com/JarbasAl))
+
+## [0.0.2a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/0.0.2a1) (2024-11-17)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/68f3b2a6bc076c5d06e06f8555dc0d0777b2b917...0.0.2a1)
+
+**Merged pull requests:**
+
+- Release 0.0.2a1 [\#2](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/2) ([github-actions[bot]](https://github.com/apps/github-actions))
+- fix:libcamera support [\#1](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/1) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
