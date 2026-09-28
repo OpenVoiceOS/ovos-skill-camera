@@ -1,10 +1,6 @@
 # Camera Skill
 
-Camera skill for OpenVoiceOS, needs the companion [ovos-PHAL-plugin-camera](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-camera)
-
-## Description
-
-This skill allows you to ask to take pictures using a connected webcam. You can configure various settings to customize its behavior.
+This skill takes pictures with a connected webcam through voice commands on OpenVoiceOS. It needs a companion plugin: [ovos-PHAL-plugin-camera](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-camera) or [ovos-PHAL-plugin-termux](https://github.com/HiveMindInsiders/ovos-PHAL-plugin-termux).
 
 ## Examples
 
@@ -12,7 +8,7 @@ This skill allows you to ask to take pictures using a connected webcam. You can 
 
 ## Settings
 
-The `settings.json` file allows you to configure the behavior of the Camera Skill. Below are the available settings:
+The `settings.json` file configures the skill. The table below lists the available settings.
 
 | Setting Name         | Type     | Default       | Description                                                                 |
 |----------------------|----------|---------------|-----------------------------------------------------------------------------|
@@ -30,4 +26,11 @@ The `settings.json` file allows you to configure the behavior of the Camera Skil
 }
 ```
 
+## Related Projects
 
+* [ovos-PHAL-plugin-camera](https://github.com/OpenVoiceOS/ovos-PHAL-plugin-camera): PHAL plugin that connects this skill to a webcam.
+* [ovos-PHAL-plugin-termux](https://github.com/HiveMindInsiders/ovos-PHAL-plugin-termux): alternative PHAL plugin for Termux and Android devices.
+
+## License
+
+Apache-2.0
