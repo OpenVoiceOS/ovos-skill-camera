@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a1) (2026-09-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.3.2a4...1.4.0a1)
+
+**Merged pull requests:**
+
+- feat: skill.json for the store, en-US and its locales [\#97](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/97) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.3.2a4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.3.2a4) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.3.2a3...1.3.2a4)
