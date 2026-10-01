@@ -1,8 +1,10 @@
 """Multilingual golden-utterance end-to-end coverage for ovos-skill-camera.
 
-test_golden_utterances.py only exercises en-US; every locale under locale/
+test_golden_utterances.py only exercises en-US; this suite runs every
+golden_utterances_<lang>.jsonl file on disk. Every locale under locale/
 ships all three .intent files (have_camera, take_picture,
-picture_location), so this suite covers every locale in the fleet.
+picture_location). Rows marked needs_manual (machine-generated, not vouched
+by a native speaker) run too: the matcher must still route them.
 
 Dispatched ovos.intent.matched intent names carry no .intent suffix
 (OVOS-INTENT-2 naming), matching test_golden_utterances.py's convention.
@@ -30,10 +32,9 @@ SKILL_ID = "ovos-skill-camera.openvoiceos"
 
 END2END_DIR = Path(__file__).parent
 
-LANGS = [
-    "en-US", "ca-ES", "da-DK", "de-DE", "es-ES", "eu-ES", "fa-IR", "fr-FR",
-    "gl-ES", "it-IT", "kab", "nl-NL", "oc-FR", "pt-BR", "pt-PT", "sv-SE",
-]
+LANGS = sorted(p.stem.split("golden_utterances_", 1)[1]
+               for p in END2END_DIR.glob("golden_utterances_*.jsonl"))
+assert LANGS, "no golden_utterances_<lang>.jsonl files found"
 
 _IGNORE = [
     "speak",
@@ -58,10 +59,8 @@ def _load_rows(lang):
             line = line.strip()
             if not line:
                 continue
-            row = json.loads(line)
-            if row.get("needs_manual"):
-                continue
-            rows.append(row)
+            rows.append(json.loads(line))
+    assert rows, f"{lang}: no golden rows"
     return rows
 
 
@@ -106,8 +105,6 @@ def _types(mc, text, lang, session_id) -> List[str]:
     return [m.msg_type for m in capture.finish()]
 
 
-KNOWN_BUGS = {}
-
 _PARAMS = [
     pytest.param(row["lang"], row, id=_golden_id(row))
     for row in ALL_ROWS
@@ -119,10 +116,13 @@ _PARAMS = [
 def test_golden_utterance_multilang(minicroft, row):
     intent_name = _label_to_bus_name(row["intent_label"])
     types = _types(minicroft, row["utterance"], row["lang"], f"golden-{_golden_id(row)}")
-    matched = f"{SKILL_ID}:{intent_name}" in types
-    bug_key = (row["lang"], row["utterance"])
-    if bug_key in KNOWN_BUGS and not matched:
-        pytest.xfail(reason=f"known-bug: {KNOWN_BUGS[bug_key]}")
-    assert matched, (
+    assert f"{SKILL_ID}:{intent_name}" in types, (
         f"[{row['lang']}] {row['utterance']!r}: expected {SKILL_ID}:{intent_name!r}, got {types!r}"
     )
+
+
+def test_every_shipping_locale_has_a_golden_file():
+    golden = {p.stem.split("_", 2)[2] for p in END2END_DIR.glob("golden_utterances_*.jsonl")}
+    locale_root = END2END_DIR.parent.parent / "locale"
+    shipping = {d.name for d in locale_root.iterdir() if d.is_dir() and any(d.rglob("*.intent"))}
+    assert golden == shipping, f"golden files {sorted(golden ^ shipping)} differ from shipping locales"
