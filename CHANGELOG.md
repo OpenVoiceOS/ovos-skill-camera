@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a2) (2026-10-08)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.4.0a1...1.4.0a2)
+
+**Merged pull requests:**
+
+- test: golden utterances for every intent in every shipped locale [\#99](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/99) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.4.0a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a1) (2026-09-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.3.2a4...1.4.0a1)
