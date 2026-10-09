@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0a3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a3) (2026-10-09)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.4.0a2...1.4.0a3)
+
+**Merged pull requests:**
+
+- test: natural golden rows and an m2v gate for every locale [\#101](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/101) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.4.0a2](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a2) (2026-10-08)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.4.0a1...1.4.0a2)
