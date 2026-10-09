@@ -36,13 +36,8 @@ class TestCameraPhalIntegration(TestCase):
     @classmethod
     def setUpClass(cls):
         cls.minicroft = get_minicroft([SKILL_ID])
-        # ovos-padatious trains its container in a background thread; a
-        # query fired before that thread finishes is served the
-        # pre-registration state and comes back unmatched, which starves
-        # the skill's own ping/pong round trip below (see
-        # ovos_padatious.padaos:calc_intents "padaos compiling in
-        # background, serving last compiled state in the meantime"). Give
-        # it a moment to settle before the first utterance in this class.
+        # Give intent registration a moment to settle before the first
+        # utterance in this class.
         time.sleep(2)
 
     @classmethod
@@ -104,7 +99,7 @@ class TestCameraPhalIntegration(TestCase):
     def _drive(self, utterance):
         session = Session(f"e2e-phal-{hash(utterance)}")
         session.lang = LANG
-        session.pipeline = ["ovos-padatious-pipeline-plugin-high"]
+        session.pipeline = ["ovos-padacioso-pipeline-plugin-high"]
         handled = []
         self.minicroft.bus.on("ovos.utterance.handled", lambda m: handled.append(m))
         message = Message(
