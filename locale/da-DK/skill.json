@@ -1,0 +1,16 @@
+{
+  "skill_id": "ovos-skill-camera.openvoiceos",
+  "source": "https://github.com/OpenVoiceOS/ovos-skill-camera",
+  "name": "Camera",
+  "description": "Take pictures with a connected webcam by voice.",
+  "examples": [
+    "virker kameraet",
+    "hvor gemmer du fotoene"
+  ],
+  "tags": [
+    "camera",
+    "webcam",
+    "photo",
+    "media"
+  ]
+}
