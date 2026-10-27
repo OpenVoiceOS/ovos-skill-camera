@@ -15,14 +15,14 @@ the full skill -> PHAL round-trip on one bus:
 
 Run: pytest test/end2end/test_phal_integration.py -v
 """
-import time
 from unittest import TestCase
 from unittest.mock import MagicMock, patch
 
 import numpy as np
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import Session
-from ovoscope import get_minicroft
+from ovoscope import CaptureSession
+from ovoscope.routing import PIPELINE, TALLY, get_prototype_minicroft
 
 import ovos_PHAL_plugin_camera as cammod
 
@@ -35,10 +35,7 @@ class TestCameraPhalIntegration(TestCase):
 
     @classmethod
     def setUpClass(cls):
-        cls.minicroft = get_minicroft([SKILL_ID])
-        # Give intent registration a moment to settle before the first
-        # utterance in this class.
-        time.sleep(2)
+        cls.minicroft = get_prototype_minicroft([SKILL_ID], lang=LANG)
 
     @classmethod
     def tearDownClass(cls):
@@ -99,19 +96,18 @@ class TestCameraPhalIntegration(TestCase):
     def _drive(self, utterance):
         session = Session(f"e2e-phal-{hash(utterance)}")
         session.lang = LANG
-        session.pipeline = ["ovos-padacioso-pipeline-plugin-high"]
-        handled = []
-        self.minicroft.bus.on("ovos.utterance.handled", lambda m: handled.append(m))
+        session.pipeline = PIPELINE
         message = Message(
             "recognizer_loop:utterance",
             {"utterances": [utterance], "lang": LANG},
             {"session": session.serialize()},
         )
-        self.minicroft.bus.emit(message)
-        deadline = time.monotonic() + 15
-        while not handled and time.monotonic() < deadline:
-            time.sleep(0.1)
-        self.assertTrue(handled, f"utterance {utterance!r} was not handled")
+        capture = CaptureSession(self.minicroft)
+        capture.capture(message, timeout=15)
+        types = [m.msg_type for m in capture.finish()]
+        TALLY.assert_routed(utterance, f"{SKILL_ID}:take_picture", types)
+        self.assertIn("ovos.utterance.handled", types,
+                      f"utterance {utterance!r} was not handled")
 
     def test_take_picture_round_trip(self):
         # (a) skill detects the camera via ping/pong and emits camera.get,
