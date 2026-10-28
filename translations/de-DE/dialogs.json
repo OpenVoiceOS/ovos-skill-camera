@@ -1,0 +1,17 @@
+{
+  "camera_error.dialog": [
+    "Kein Zugriff auf die Kamera"
+  ],
+  "camera_yes.dialog": [
+    "Meine Kamera ist einsatzbereit.",
+    "Die Kamera funktioniert einwandfrei.",
+    "Ja, eine Kamera ist vorhanden."
+  ],
+  "get_ready.dialog": [
+    "Lächeln bitte"
+  ],
+  "picture.dialog": [
+    "ich fotografiere gerne",
+    "(Bild|Foto) aufgenommen"
+  ]
+}
