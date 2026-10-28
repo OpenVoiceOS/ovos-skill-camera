@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0a4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a4) (2026-10-28)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.4.0a3...1.4.0a4)
+
+**Merged pull requests:**
+
+- test: run the end2end suite on the m2v prototype pipeline [\#103](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/103) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.4.0a3](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a3) (2026-10-09)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.4.0a2...1.4.0a3)
