@@ -1,10 +1,11 @@
 import os.path
 import random
 import time
+from fractions import Fraction
 from os.path import dirname, exists, join
+from numtag import tag_numbers
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import SessionManager, Session
-from ovos_number_parser import extract_number
 from ovos_utils import classproperty
 from ovos_utils.process_utils import RuntimeRequirements
 from ovos_workshop.decorators import intent_handler
@@ -86,9 +87,10 @@ class WebcamSkill(OVOSSkill):
 
         self.speak_dialog("get_ready", wait=True)
 
-        countdown = extract_number(message.data.get("countdown", ""), lang=self.lang)
+        mentions = tag_numbers(message.data.get("countdown", ""), self.lang)
+        countdown = int(Fraction(mentions[0].value)) if mentions else 0
         if countdown:
-            self.do_countdown(int(countdown))
+            self.do_countdown(countdown)
         elif self.settings.get("countdown"):
             self.do_countdown(3)
 
