@@ -1,7 +1,9 @@
 import os.path
 import random
 import time
+from fractions import Fraction
 from os.path import dirname, exists, join
+from numtag import tag_numbers
 from ovos_bus_client.message import Message
 from ovos_bus_client.session import SessionManager, Session
 from ovos_utils import classproperty
@@ -67,6 +69,16 @@ class WebcamSkill(OVOSSkill):
         else:
             self.speak_dialog("camera_error")
 
+    @intent_handler("picture_location.intent")
+    def handle_picture_location(self, message):
+        self.speak_dialog("picture_location", {"path": self.pictures_folder})
+
+    def do_countdown(self, seconds: int):
+        # need time to allow sensor to stabilize
+        for n in range(seconds, 0, -1):
+            self.gui.show_text(str(n))
+            self.speak(str(n), wait=True)
+
     @intent_handler("take_picture.intent")
     def handle_take_picture(self, message):
         if not self.sess_has_camera(message):
@@ -75,14 +87,12 @@ class WebcamSkill(OVOSSkill):
 
         self.speak_dialog("get_ready", wait=True)
 
-        if self.settings.get("countdown"):
-            # need time to Allow sensor to stabilize
-            self.gui.show_text("3")
-            self.speak("3", wait=True)
-            self.gui.show_text("2")
-            self.speak("2", wait=True)
-            self.gui.show_text("1")
-            self.speak("1", wait=True)
+        mentions = tag_numbers(message.data.get("countdown", ""), self.lang)
+        countdown = int(Fraction(mentions[0].value)) if mentions else 0
+        if countdown:
+            self.do_countdown(countdown)
+        elif self.settings.get("countdown"):
+            self.do_countdown(3)
 
         pic_path = join(self.pictures_folder, time.strftime("%Y-%m-%d_%H-%M-%S") + ".jpg")
         self.bus.emit(message.forward("ovos.phal.camera.get", {"path": pic_path}))

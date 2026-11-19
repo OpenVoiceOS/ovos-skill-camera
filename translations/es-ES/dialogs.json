@@ -1,0 +1,17 @@
+{
+  "camera_error.dialog": [
+    "No puedo acceder a la cámara"
+  ],
+  "camera_yes.dialog": [
+    "Mi cámara está lista para usar",
+    "La cámara funciona correctamente.",
+    "Sí, hay una cámara disponible"
+  ],
+  "get_ready.dialog": [
+    "Di patata"
+  ],
+  "picture.dialog": [
+    "Me gusta (sacar|tomar|hacer) fotos",
+    "fotografía (hecha|tomada)"
+  ]
+}
