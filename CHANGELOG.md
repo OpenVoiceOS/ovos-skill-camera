@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0a6](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a6) (2026-11-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.4.0a5...1.4.0a6)
+
+**Merged pull requests:**
+
+- test: read "a couple" and "een paar" as numtag \#247 does [\#107](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/107) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.4.0a5](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a5) (2026-11-19)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.4.0a4...1.4.0a5)
@@ -436,17 +444,9 @@
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/0.0.2a1...0.0.3a1)
 
-**Merged pull requests:**
-
-- fix: BGR [\#3](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/3) ([JarbasAl](https://github.com/JarbasAl))
-
 ## [0.0.2a1](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/0.0.2a1) (2024-11-17)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/68f3b2a6bc076c5d06e06f8555dc0d0777b2b917...0.0.2a1)
-
-**Merged pull requests:**
-
-- Release 0.0.2a1 [\#2](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/2) ([github-actions[bot]](https://github.com/apps/github-actions))
 
 
 
