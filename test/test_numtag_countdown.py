@@ -46,6 +46,10 @@ ROWS = [
     ("ru-RU", "ru-ru", "фото через десять секунд", 10),
     ("sv-SE", "sv-se", "bild om fem sekunder", 5),
     ("sv-SE", "sv-se", "bild om tio sekunder", 10),
+    # two numbers in the slot: the first one is the countdown
+    ("en-US", "en-us", "photo in two or three seconds", 2),
+    ("es-ES", "es-es", "haz una foto en dos o tres segundos", 2),
+    ("fr-FR", "fr-fr", "prends une photo avec un compte à rebours de deux ou trois secondes", 2),
 ]
 
 
@@ -78,6 +82,19 @@ def _make_skill(lang, settings=None):
 def _spoken(skill, countdown):
     skill.handle_take_picture(Message("recognizer_loop:utterance", {"countdown": countdown}))
     return [call.args[0] for call in skill.speak.call_args_list]
+
+
+COUPLE_ISSUE = "https://github.com/TigreGotico/numtag/issues/244"
+
+
+@pytest.mark.xfail(strict=True, reason=COUPLE_ISSUE)
+@pytest.mark.parametrize("locale,lang,utterance", [
+    ("en-US", "en-us", "photo in a couple of seconds"),
+    ("nl-NL", "nl-nl", "foto in een paar seconden"),
+])
+def test_a_couple_counts_two(locale, lang, utterance):
+    skill = _make_skill(lang)
+    assert _spoken(skill, _slot(locale, utterance)) == ["2", "1"]
 
 
 @pytest.fixture(autouse=True)
