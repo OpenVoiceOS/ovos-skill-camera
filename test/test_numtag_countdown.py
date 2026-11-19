@@ -84,17 +84,19 @@ def _spoken(skill, countdown):
     return [call.args[0] for call in skill.speak.call_args_list]
 
 
-COUPLE_ISSUE = "https://github.com/TigreGotico/numtag/issues/244"
+def test_a_couple_counts_two():
+    skill = _make_skill("en-us")
+    assert _spoken(skill, _slot("en-US", "photo in a couple of seconds")) == ["2", "1"]
 
 
-@pytest.mark.xfail(strict=True, reason=COUPLE_ISSUE)
-@pytest.mark.parametrize("locale,lang,utterance", [
-    ("en-US", "en-us", "photo in a couple of seconds"),
-    ("nl-NL", "nl-nl", "foto in een paar seconden"),
+# "een paar" is an indefinite small amount, not two, so no number is read
+@pytest.mark.parametrize("settings,spoken", [
+    ({}, []),
+    ({"countdown": True}, ["3", "2", "1"]),
 ])
-def test_a_couple_counts_two(locale, lang, utterance):
-    skill = _make_skill(lang)
-    assert _spoken(skill, _slot(locale, utterance)) == ["2", "1"]
+def test_een_paar_keeps_the_settings_fallback(settings, spoken):
+    skill = _make_skill("nl-nl", settings=settings)
+    assert _spoken(skill, _slot("nl-NL", "foto in een paar seconden")) == spoken
 
 
 @pytest.fixture(autouse=True)
