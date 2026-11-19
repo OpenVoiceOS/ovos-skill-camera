@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.4.0a5](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a5) (2026-11-19)
+
+[Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.4.0a4...1.4.0a5)
+
+**Merged pull requests:**
+
+- refactor: read the countdown through numtag [\#105](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/105) ([openvoiceos-bot](https://github.com/openvoiceos-bot))
+
 ## [1.4.0a4](https://github.com/OpenVoiceOS/ovos-skill-camera/tree/1.4.0a4) (2026-10-28)
 
 [Full Changelog](https://github.com/OpenVoiceOS/ovos-skill-camera/compare/1.4.0a3...1.4.0a4)
@@ -439,7 +447,6 @@
 **Merged pull requests:**
 
 - Release 0.0.2a1 [\#2](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/2) ([github-actions[bot]](https://github.com/apps/github-actions))
-- fix:libcamera support [\#1](https://github.com/OpenVoiceOS/ovos-skill-camera/pull/1) ([JarbasAl](https://github.com/JarbasAl))
 
 
 
